@@ -1,0 +1,382 @@
+\documentclass[11pt,xcolor={dvipsnames},hyperref={pdftex,pdfpagemode=UseNone,hidelinks,pdfdisplaydoctitle=true},usepdftitle=false]{beamer}
+\usepackage{presentation}
+
+% Enter presentation title to populate PDF metadata:
+\hypersetup{pdftitle={Minimalist LaTeX Template for Academic Presentations}}
+
+% Enter path to PDF file with figures:
+\newcommand{\pdf}{figures.pdf}
+
+\begin{document}
+
+% Enter title:
+\title{Research Presentation}
+
+\information
+%
+% Enter URL to research paper (can be commented out):
+[https://github.com/pmichaillat/latex-presentation]
+%
+% Enter authors:
+{First Author, Second Author}
+%
+% Enter location and date (can be commented out):
+{Location -- Date}
+
+\frame{\titlepage}
+
+% Enter content of presentation:
+\begin{frame}
+\frametitle{Generic slide}
+\begin{itemize}
+\item Consectetur adipiscing elit
+\item Sed do eiusmod tempor incididunt
+\item Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+\item Ut labore et dolore magna aliqua
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with a very, very long title and various font shapes: Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat}
+\begin{itemize}
+\item Text in italic: \textit{consectetur adipiscing elit, ut labore et dolore magna aliqua, quis nostrud exercitation ullamco laboris Quis nostrud exercitation ullamco laboris}
+\item Text in bold: \textbf{sed do eiusmod tempor incididunt, duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur}
+\item Text in semibold: \textsb{quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with nested lists}
+\begin{itemize}
+\item Sed do eiusmod tempor incididunt:
+\begin{itemize}
+\item Quis nostrud exercitation ullamco laboris Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation ullamco laboris. 
+\begin{itemize}
+\item Lorem ipsum dolor sit amet
+\item Consectetur adipiscing elit
+\item Quis nostrud exercitation ullamco laboris
+\end{itemize}
+\item Nisi ut aliquip ex ea commodo consequat
+\item Duis aute irure dolor in reprehenderit in voluptate
+\item Velit esse cillum dolore eu fugiat nulla pariatur
+\end{itemize}
+\item Ut labore et dolore magna aliqua
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with numbered list}
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet
+\item Consectetur adipiscing elit
+\item Sed do eiusmod tempor incididunt
+\item Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+\item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
+\item Ut labore et dolore magna aliqua
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with nested numbered lists}
+\begin{enumerate}
+\item Sed do eiusmod tempor incididunt:
+\begin{enumerate}
+\item Quis nostrud exercitation ullamco laboris Quis nostrud exercitation ullamco laboris. Quis nostrud exercitation ullamco laboris. 
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet
+\item Consectetur adipiscing elit
+\item Quis nostrud exercitation ullamco laboris
+\end{enumerate}
+\item Nisi ut aliquip ex ea commodo consequat
+\item Duis aute irure dolor in reprehenderit in voluptate
+\item Velit esse cillum dolore eu fugiat nulla pariatur
+\end{enumerate}
+\item Ut labore et dolore magna aliqua
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with alerts}
+Lorem ipsum dolor sit amet:
+\begin{itemize}
+\item Here is a basic alert: \al{important text}
+\item Here is a basic alert on the second click: \al[2]{important text}
+\item Here is a positive alert on the third click: \alg[3]{important text}
+\item Here are various alerts to flag the sign of numbers:
+\begin{itemize}
+\item Positive number: \alg{+5}
+\item Negative number: \alr{-10}
+\item Zero number: \alb{0.0}
+\end{itemize}
+\item Here are the same alerts on the second and third clicks:
+\begin{itemize}
+\item Positive number: \alg[2-3]{+5}
+\item Negative number: \alr[2]{-10}
+\item Zero number: \alb[3]{0.0}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\heading{Generic section}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with some numbers and special characters} 
+\begin{itemize}
+\item Pellentesque habitant 25\% morbi tristique senectus 1837--1905
+\item Integer semper euismod sapien vel dictum \#1 and \#6.
+\item  Donec et ipsum 3/4 in mauris ultricies pulvinar 9/2
+\item Nullam quis ``sapien a justo'' vestibulum fermentum
+\item Cras sed odio \& vitae mi placerat mollis: \$23.
+\item (Nam sagittis sapien id tortor commodo---a pulvinar velit ultricies\ldots Integer ac magna velorci mollis vestibulum.)
+\end{itemize}	
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with math}
+\begin{itemize}
+\item Some Roman letters: $G[p + P^7-Q] - A_B + L\{j\} = F(X) \times Z_f/H \cdot (g_4 - i)$
+\item Some Greek letters: $\alpha + \Gamma - \zeta \times \Lambda - [\beta - \pi/2] + \phi^2 \to \infty$
+\item Some blackboard bold letters: $\mathbb{R}^2 + \mathbb{Q}^3 - \mathbb{Z} = \mathbb{C} \subset \mathbb{N} \times \mathbb{N} \neq \mathbb{E} / \mathbb{P}$
+\item Some calligraphic letters: $(\mathcal{A}(X) - \mathcal{B}(j)^3) + [\mathcal{Z}(t) / \mathcal{H}(t)]^5 \mapsto \mathcal{F}(g) $
+\item Some symbols and operators: $\sqrt{\ln(u)} \in Q \propto \cos(\theta) \leq \sin(\pi) - \exp(3)$
+\item Here is an equation:
+\begin{equation*}
+\int_{0}^{\infty}e^{-\delta t} \ln(c_{j}(t))+ \mathcal{U}(b_{j}(t) - \mathcal{B}(t))- \frac{\zeta}{4} h_{j}(t) -\frac{\gamma \cdot \pi_{j}(t)^2}{8}\,dt
+\end{equation*}
+\item Here is another display with an equation:
+\begin{align*}
+\dot{b}_{j}(t) &= i(t) b_{j}(t) + p_{j}(t)  y_{j}(t) - \sum_{k=0}^{\infty} p_{k}(x) c_{jk}(x) = \prod_{j} \prod_{k} c_{jk}(t)^{(\epsilon-1)/\epsilon} 
+\end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Greek letters and their variants}
+\begin{itemize}
+\item Some \al{but not all} of the variants of the Greek letters are available
+\item There is:
+\begin{itemize}
+\item a variant for theta: \texttt{\textbackslash vartheta} gives $\vartheta \neq \theta$
+\item a variant for epsilon: \texttt{\textbackslash varepsilon} gives $\varepsilon \neq \epsilon$
+\item a variant for pi: \texttt{\textbackslash varpi} gives $\varpi \neq \pi$
+\item a variant for phi: \texttt{\textbackslash varpsi} gives $\varphi \neq \phi$
+\end{itemize}
+\item But there is no available variant for:
+\begin{itemize}
+\item sigma: \texttt{\textbackslash varsigma} gives $\varsigma = \sigma$
+\item rho: \texttt{\textbackslash varrho} gives $\varrho = \rho$
+\item kappa: \texttt{\textbackslash varkappa} gives an error
+\end{itemize}
+ \end{itemize}	
+\end{frame}
+
+\begin{frame}
+\frametitle{Bold characters in math}
+\begin{itemize}
+\item In the template it is possible to bold all math characters
+\item Roman characters can be bolded: $\bm{a} + \bm{D} = \bm{E}^2 + \bm{j}/\bm{i}$
+\item Greek characters can also be bolded: $\bm{\alpha} + \bm{\Delta} = \bm{\epsilon}^2 + \bm{\Lambda}/\bm{\Phi}$
+\item Digits can be bolded: $1 + 2 \neq \bm{1} + \bm{2}$
+\item Finally, it is possible to bold calligraphic letters: $\bm{\mathcal{C}} + \bm{\mathcal{E}} - [\bm{\mathcal{X}}+\bm{\mathcal{Y}}]$.
+\item \alb[2]{Blackboard-bold letters are already ``bold'' so they cannot be bolded further}
+\end{itemize}	
+\end{frame}
+
+\begin{frame}
+\heading{Slides with figures}
+\end{frame}
+
+\begin{frame}
+\frametitle{Basic figure}
+\includegraphics[scale=0.275,page=4]{\pdf}%
+\end{frame}
+
+\begin{frame}
+\frametitle{Collection of figures (one figure per click)}
+\includegraphics<1>[scale=0.275,page=1]{\pdf}%
+\includegraphics<2>[scale=0.275,page=2]{\pdf}%
+\includegraphics<3>[scale=0.275,page=3]{\pdf}%
+\includegraphics<4>[scale=0.275,page=5]{\pdf}%
+\end{frame}
+
+\begin{frame}
+\heading{Slide with table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Basic table}
+\begin{tabular*}{\textwidth}{@{\extracolsep\fill}lcccc}
+\toprule
+ & Column 1 & Column 2 & Column 3 & Column 4\\
+\midrule
+Line 1 & A  & \al[1]{B} & C  & C \\
+Line 2 & D & E & F & \alg[2]{C} \\ 
+Line 3 & \al[1]{G} & H & I & \alg[2]{C} \\ 
+\midrule
+Line 4 & J & K & L & \alg[2]{C} \\ 
+Line 5 & M & N & O & \alg[2]{C} \\ 
+\midrule
+Line 6 & \al[1]{B} & \alr[3]{K} & L & C \\ 
+Line 7 & M & N & -- & \alr[3]{K} \\ 
+\bottomrule
+\end{tabular*}
+\end{frame}
+
+
+\begin{frame}
+\heading{Slides with theorems}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Slide with theorem}
+\begin{theorem}[First theorem]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit:
+\begin{equation*}
+\sum_k\mathcal{S}_{k_x}(z) \approx \frac{S(z)^x}{k / 23 -\zeta\gamma [45- S(z)] + \ln(y) - j^2+x(l)}
+\end{equation*}
+Ut enim ad minim veniam, sunt in culpa qui officia deserunt mollit anim id est laborum. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{theorem}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Slide with lemma}
+\begin{lemma}[Interesting lemma]
+ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat:
+\begin{equation}
+z^* = \int_{0}^{\infty} \alpha(i) \cdot \frac{1-\beta}{1-\alpha(i)\beta}\,di
+\end{equation}
+Sed vel sodales dui: 
+\begin{equation}
+S(z)^x > \frac{\zeta}{\gamma} \cdot \exp(45- S(z))
+\end{equation}
+\end{lemma}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with proposition}
+\begin{itemize}
+\item Quia dolor sit amet consectetur adipiscing velit
+\item Sed quia non numquam eius modi tempora incidunt
+\item Ut labore et dolore magnam aliquam quaerat voluptatem
+\end{itemize}
+\begin{proposition}[Application to interesting topic]
+Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua $\mathcal{Z}(\alpha)$. 
+\begin{equation*}
+\frac{\sum_i z^i}{\prod_i q^i} \to \frac{\int_{0}^{\infty} \alpha(i) \cdot [1-\beta]\,di}{1-\exp(\alpha)\sin(\beta)}.
+\end{equation*}
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+\end{proposition}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with corrolary}
+\begin{corollary}[Implication in a simple yet common case]
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua:
+\begin{equation*}
+\mathbb{E}(N(z^*)) \approx \frac{1-\mathbb{P}(\alpha\pi)}{1-\pi}- \frac{f(y)}{z(p)^*} + P(\Gamma).
+\end{equation*}
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\end{corollary}
+\begin{itemize}
+\item Donec commodo justo a eros malesuada
+\item Eget vulputate tortor accumsan, 
+\item Vulputate metus eu, finibus nunc: $\ln(y) - \sum j^2 \to x(l)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\heading{A long section title: Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat}
+\end{frame}
+
+
+\begin{frame}[label=firstSlide]
+\frametitle{Slide with buttons}
+\begin{enumerate}
+\item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+\item  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+\item Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. 
+\item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+\end{enumerate}
+\hyperlink{backupSlide}{\beamergotobutton{Go to a first backup slide}}
+\hyperlink{anotherBackupSlide}{\beamergotobutton{Go to another backup slide}}
+\end{frame}
+
+\begin{frame}[allowframebreaks=0.8]
+\frametitle{Slide with long derivation or long reference list}
+\begin{itemize}
+\item lorem 
+\item ipsum 
+\item dolor 
+\item sit 
+\item amet
+\item consectetur 
+\item adipisicing 
+\item elit
+\item sed
+\item do
+\item eiusmod
+\item tempor
+\item incididunt
+\item ut
+\item labore
+\item et 
+\item dolore 
+\item magna 
+\item aliqua
+\item ut enim
+\item ad minim 
+\item veniam
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Slide with pictograms}
+\begin{itemize}
+\item implication: this \so that
+\item sequential events: this \then that
+\item something is going up: \up
+\item something is going down: \down
+\item something is not changing: \flat 
+\item[\so] pictogram used as a list item
+\item[\then] another pictogram used as a list item
+\end{itemize}
+\end{frame}
+
+\lastslide
+
+\begin{frame}[label=backupSlide]
+\frametitle{First backup slide}
+\begin{itemize}
+\item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+\item  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+\item Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. 
+\end{itemize}
+\hyperlink{firstSlide}{\beamergotobutton{Return to main slide}}
+\end{frame}
+
+\begin{frame}[label=anotherBackupSlide]
+\frametitle{Another backup slide}
+\begin{enumerate}
+\item  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+\item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+\begin{enumerate}
+\item Duis aute irure dolor in reprehenderit in voluptate velit esse
+\item Cillum dolore eu fugiat nulla pariatur
+\end{enumerate}
+\item Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua.
+\end{enumerate}
+\hyperlink{firstSlide}{\beamergotobutton{Return to main slide}}
+\end{frame}
+
+\end{document}

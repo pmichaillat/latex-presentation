@@ -1,0 +1,235 @@
+% ---- Select text fonts -----
+
+% Apply sophisticated fonts
+\usefonttheme{professionalfonts}
+
+% Select text font
+\usepackage{sourcesanspro}
+
+% Define semibold font series
+\DeclareRobustCommand{\sbseries}{\fontseries{sb}\selectfont}
+\DeclareTextFontCommand{\textsb}{\sbseries}
+
+% Select monospaced font
+\usepackage{sourcecodepro}
+
+% Select font encoding 
+\usepackage[T1]{fontenc}
+
+% Select URL font
+\usepackage{url}
+
+% ---- Select math fonts -----
+
+% Select symbol font
+\usepackage{MnSymbol}
+
+% Select calligraphic and blackboard-bold fonts
+\usepackage[cal=euler,bb=fourier]{mathalpha}
+
+% Enable bold math characters
+\newcommand{\hmmax}{0} % Avoid "Too many math alphabets" error
+\newcommand{\bmmax}{0} % Avoid "Too many math alphabets" error
+\usepackage{bm}
+
+% Select font for Roman letters, Greek letters, digits, and punctuation
+\usepackage[italic,eulergreek,nolessnomore,noparenthesis,noplusnominus,noequal,nohbar]{mathastext}
+
+% Correct spacing around certain Roman letters
+\MTsetmathskips{y}{2mu}{0mu}
+\MTsetmathskips{j}{2mu}{0mu}
+
+% ---- Select Beamer theme ----
+
+% Select theme
+\usetheme{Boadilla}
+
+% Select color theme
+\usecolortheme[]{seagull}
+
+% Make covered elements transparent
+\setbeamercovered{transparent}
+
+% Remove navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% ---- Adjust slide layout ----
+
+% Set layout on title page
+\setbeamertemplate{title page}[default][left,leftskip=-8pt]
+
+% Set margins on regular pages
+\setbeamersize{text margin left=5mm,text margin right=5mm}
+
+% ---- Adjust spacing ----
+
+% Set spacing between lines
+\usepackage[onehalfspacing]{setspace}
+
+% Set spacing on lines
+\usepackage{microtype}
+
+% Remove ligatures
+\DisableLigatures[f]{encoding = *, family = * }
+
+% ---- Adjust font sizes and shapes ----
+
+% Set title font
+\setbeamerfont{title}{size=\huge, series=\scshape}
+
+% Set author font
+\setbeamerfont{author}{size=\large}
+
+% Set frame title font
+\setbeamerfont{frametitle}{series=\scshape}
+
+% Ensure uniform capitalization of frame title, and lower title
+\setbeamertemplate{frametitle}{\vskip3mm\MakeLowercase{\insertframetitle}}
+
+% Format continuation count for multipage slides
+\setbeamertemplate{frametitle continuation}{[\insertcontinuationcount]}
+
+% Set list font
+\setbeamerfont{itemize/enumerate subbody}{size=\normalsize} % Second level
+\setbeamerfont{itemize/enumerate subsubbody}{size=\normalsize} % Third level
+
+% Set theorem fonts
+\setbeamerfont{block title}{series=\sbseries,size=\normalsize} % Title
+
+% Set button font
+\setbeamerfont{button}{size=\footnotesize}
+
+% ---- Adjust colors ----
+
+% Define colors
+\colorlet{BlackGray}{black!85!}
+\colorlet{DarkGray}{gray!60!}
+\colorlet{LightGray}{gray!30!}
+
+% Set title color
+\setbeamercolor{title}{fg=BlackGray}
+
+% Set frame title color
+\setbeamercolor{frametitle}{fg=BlackGray}
+
+% Set text color
+\setbeamercolor{normal text}{fg=BlackGray}
+
+% Set list items color
+\setbeamercolor{itemize item}{fg=DarkGray} % Itemized list, first level
+\setbeamercolor{itemize subitem}{fg=DarkGray}  % Itemized list, second level
+\setbeamercolor{itemize subsubitem}{fg=DarkGray}  % Itemized list, third level
+\setbeamercolor{enumerate item}{fg=DarkGray}  % Numbered list, first level
+\setbeamercolor{enumerate subitem}{fg=DarkGray}  % Numbered list, second level
+\setbeamercolor{enumerate subsubitem}{fg=DarkGray}  % Numbered list, third level
+
+% Set theorem colors
+\setbeamercolor{block title}{fg=BlackGray,bg=LightGray} % Title
+\setbeamercolor{block body}{fg=BlackGray,bg=LightGray} % Body
+
+% Set footer color
+\setbeamercolor{footline}{fg=DarkGray}
+
+% Set button colors
+\setbeamercolor{button}{fg=DarkGray, bg=white}
+
+% ---- Format title slide ----
+
+% Title capitalization and underline
+\let\oldtitle\title
+\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-5mm}\\\color{BlackGray}{\rule{\textwidth}{2pt}}\vspace{1cm}}}
+
+% Define custom commands with complex argument specifications
+\usepackage{xparse}
+
+% Paper information
+\NewDocumentCommand{\information}{o g g}{%
+\author[]{#2%
+\IfValueT{#3}{\vspace{5mm}\\#3}%
+\IfValueT{#1}{\vspace{5mm}\\\color{DarkGray}{\footnotesize Available at \url{#1}}}%
+}\date[]{}}
+
+% ---- Format lists ----
+
+% Format itemized lists
+\setbeamertemplate{itemize item}{\textbullet} % First-level item
+\setbeamertemplate{itemize subitem}{\textendash} % Second-level item
+\setbeamertemplate{itemize subsubitem}{\textsquare} % Third-level item
+
+% Format numbered lists
+\setbeamertemplate{enumerate item}[default] % First-level item
+\setbeamertemplate{enumerate subitem}{\alph{enumii}.} % Second-level item
+\setbeamertemplate{enumerate subsubitem}{\roman{enumiii}.} % Third-level item
+
+% ---- Create text alerts ----
+
+% Standard alert
+\NewDocumentCommand{\al}{o g}{%
+\IfNoValueTF{#1}{\textcolor{RubineRed}{#2}}%
+{\textcolor<#1>{RubineRed}{#2}}}
+
+% Green, positive alert
+\NewDocumentCommand{\alg}{o g}{%
+\IfNoValueTF{#1}{\textcolor{Green}{#2}}%
+{\textcolor<#1>{Green}{#2}}}
+
+% Red, negative alert
+\NewDocumentCommand{\alr}{o g}{%
+\IfNoValueTF{#1}{\textcolor{Red}{#2}}%
+{\textcolor<#1>{Red}{#2}}}
+
+% Blue, zero alert
+\NewDocumentCommand{\alb}{o g}{%
+\IfNoValueTF{#1}{\textcolor{NavyBlue}{#2}}%
+{\textcolor<#1>{NavyBlue}{#2}}}
+
+% ---- Format figures and tables ----
+
+% Enhance table formatting
+\usepackage{booktabs}
+
+% Enable multiple rows in table
+\usepackage{multirow}
+
+% Customize captions
+\usepackage{caption}
+
+% Format captions
+\captionsetup{labelformat=empty,size=normalsize}
+
+% Center figures
+\let\oldincludegraphics\includegraphics 
+\renewcommand{\includegraphics}[2][]{\centering\oldincludegraphics[#1]{#2}}
+
+% ---- Format theorems ----
+
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
+% Define new theorems
+\newtheorem{proposition}{Proposition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{remark}{Remark}
+
+% ---- Create section slide ----
+
+\newcommand{\heading}[1]{\LARGE\scshape\color{BlackGray}\singlespacing\MakeLowercase{#1}}
+
+% ---- Create last slide ----
+
+\newcommand{\lastslide}{{\setbeamercolor{normal text}{bg=LightGray}\begin{frame}\end{frame}}}
+
+% ---- Define shortcuts for pictograms ----
+
+\newcommand{\up}{\textuparrow\,}
+\newcommand{\down}{\textdownarrow\,}
+\renewcommand{\flat}{\textrightarrow\,}
+\newcommand{\then}{$\rightsquigarrow\,$}
+\newcommand{\so}{{$\Rightarrow\,$}}
+
+% ---- Remove or insert slide numbers ----
+
+% Remove slide numbers by default
+\setbeamertemplate{footline}{}
+
+% Uncomment the line below to insert slide numbers
+% \setbeamertemplate{footline}[frame number]
