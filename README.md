@@ -27,7 +27,7 @@ While the template should also work on other operating systems and with other La
 
 ## License
 
-The content of this repository is licensed under the terms of the MIT License.
+This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Real-world implementations
 
@@ -40,5 +40,5 @@ The content of this repository is licensed under the terms of the MIT License.
 
 ## Related resources
 
-+ [LaTeX template for academic papers](https://github.com/pmichaillat/latex-paper) – This template produces academic papers following the same principles, and with a similar appearance, as this presentation template. 
-+ [LaTeX commands to write math](https://github.com/pmichaillat/latex-math) – These commands make it easy to write mathematical expressions. They can be used in combination with this paper template.
++ [LaTeX template for academic papers](https://github.com/pmichaillat/latex-paper) - This template produces academic papers following the same principles, and with a similar appearance, as this presentation template. 
++ [LaTeX commands to write math](https://github.com/pmichaillat/latex-math) - These commands make it easy to write mathematical expressions. They can be used in combination with this paper template.
