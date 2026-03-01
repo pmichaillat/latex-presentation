@@ -12,17 +12,17 @@ The presentation produced by the template can be viewed at https://pascalmichail
 
 ## Usage
 
-+ Clone the repository to your local machine.
-+ Start editing the LaTeX file `presentation.tex` to replace the boilerplate content with the content of your presentation. 
-+ Replace the figures in the PDF file `figures.pdf` with the figures that will be included in the presentation (one figure per page).
-+ Compile `presentation.tex` with pdfTeX. This will generate a new PDF file named `presentation.pdf`.
-+ The LaTeX style file `presentation.sty` formats the presentation. It must be included in the same folder as `presentation.tex`. It can be modified to alter the presentation's format.
-+ The file `presentation.pdf` is not required to use the template. It only illustrates the output of the template. It will be overwritten when `presentation.tex` is compiled.
+- Clone the repository to your local machine.
+- Start editing the LaTeX file `presentation.tex` to replace the boilerplate content with the content of your presentation. 
+- Replace the figures in the PDF file `figures.pdf` with the figures that will be included in the presentation (one figure per page).
+- Compile `presentation.tex` with pdfTeX. This will generate a new PDF file named `presentation.pdf`.
+- The LaTeX style file `presentation.sty` formats the presentation. It must be included in the same folder as `presentation.tex`. It can be modified to alter the presentation's format.
+- The file `presentation.pdf` is not required to use the template. It only illustrates the output of the template. It will be overwritten when `presentation.tex` is compiled.
 
 ## Software
 
-+ The template was developed with TeX Live 2025 on macOS. 
-+ Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
+- The template was developed with TeX Live 2025 on macOS. 
+- Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
 
 ## License
 
@@ -30,17 +30,18 @@ This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Real-world implementations
 
-+ [Recession Detection Using Classifiers on the Anticipation-Precision Frontier](https://pascalmichaillat.org/17p.pdf)
-+ [Beveridgean Phillips Curve](https://pascalmichaillat.org/15p.pdf)
-+ [Modeling Migration-Induced Unemployment](https://pascalmichaillat.org/14p.pdf)
-+ [u* = √uv: The Full-Employment Rate of Unemployment in the United States](https://pascalmichaillat.org/13p.pdf)
-+ [An Economical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf)
-+ [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf)
-+ [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf)
-+ [Resolving New Keynesian Anomalies with Wealth in the Utility Function](https://pascalmichaillat.org/11p.pdf)
+- [Recession Detection Using Classifiers on the Anticipation-Precision Frontier](https://pascalmichaillat.org/17p.pdf)
+- [Beveridgean Phillips Curve](https://pascalmichaillat.org/15p.pdf)
+- [Modeling Migration-Induced Unemployment](https://pascalmichaillat.org/14p.pdf)
+- [u* = √uv: The Full-Employment Rate of Unemployment in the United States](https://pascalmichaillat.org/13p.pdf)
+- [An Economical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf)
+- [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf)
+- [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf)
+- [Resolving New Keynesian Anomalies with Wealth in the Utility Function](https://pascalmichaillat.org/11p.pdf)
 
 ## Related resources
 
-+ [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces academic papers following the same typographic principles and with a similar appearance as this presentation template. 
-+ [latex-book](https://github.com/pmichaillat/latex-book) - This LaTeX template produces lecture notes and academic books following the same typographic principles and with a similar appearance as this presentation template. 
-+ [latex-math](https://github.com/pmichaillat/latex-math) - These LaTeX commands simplify writing mathematical expressions. They can be used in combination with this presentation template.
+- [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces academic papers that the same typographic principles as the presentation template. 
+- [latex-book](https://github.com/pmichaillat/latex-book) - This LaTeX template produces lecture notes and academic books that follow the same typographic principles as the presentation template. 
+- [latex-math](https://github.com/pmichaillat/latex-math) - These LaTeX commands simplify writing mathematical expressions. They can be used in combination with the presentation template.
+- [matlab-figures](https://github.com/pmichaillat/matlab-figures) - This MATLAB template produces minimalist scientific figures that can be inserted into your presentation.
