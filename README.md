@@ -42,4 +42,5 @@ This repository is licensed under the [MIT License](LICENSE.md).
 ## Related resources
 
 + [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces academic papers following the same typographic principles and with a similar appearance as this presentation template. 
++ [latex-book](https://github.com/pmichaillat/latex-book) - This LaTeX template produces lecture notes and academic books following the same typographic principles and with a similar appearance as this presentation template. 
 + [latex-math](https://github.com/pmichaillat/latex-math) - These LaTeX commands simplify writing mathematical expressions. They can be used in combination with this presentation template.
