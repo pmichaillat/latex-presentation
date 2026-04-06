@@ -21,7 +21,7 @@ The presentation produced by the template can be viewed at https://pascalmichail
 
 ## Software
 
-- The template was developed with TeX Live 2025 on macOS. 
+- The template is currently operational with TeX Live 2025 on macOS.
 - Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
 
 ## License

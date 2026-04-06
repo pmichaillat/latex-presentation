@@ -17,7 +17,6 @@
 \usepackage[T1]{fontenc}
 
 % Select URL font
-\usepackage{url}
 \urlstyle{same}
 
 % ---- Select math fonts -----
@@ -54,12 +53,8 @@
 % Remove navigation symbols
 \setbeamertemplate{navigation symbols}{}
 
-% ---- Adjust slide layout ----
+% ---- Adjust margins ----
 
-% Set layout on title page
-\setbeamertemplate{title page}[default][left, leftskip=-8pt]
-
-% Set margins on regular pages
 \setbeamersize{text margin left=5mm, text margin right=5mm}
 
 % ---- Adjust spacing ----
@@ -76,13 +71,16 @@
 % ---- Adjust font sizes and shapes ----
 
 % Set title font
-\setbeamerfont{title}{size=\huge, series=\scshape}
+\setbeamerfont{title}{size=\huge, shape=\scshape}
 
 % Set author font
 \setbeamerfont{author}{size=\large}
 
+% Set date font
+\setbeamerfont{date}{size=\large}
+
 % Set frame title font
-\setbeamerfont{frametitle}{series=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
 
 % Ensure uniform capitalization of frame title, and lower title
 \setbeamertemplate{frametitle}{\vskip3mm\MakeLowercase{\insertframetitle}}
@@ -104,7 +102,7 @@
 
 % Define colors
 \colorlet{BlackGray}{black!85!}
-\colorlet{DarkGray}{gray!60!}
+\colorlet{DarkGray}{gray!65!}
 \colorlet{LightGray}{gray!30!}
 
 % Set title color
@@ -136,19 +134,23 @@
 
 % ---- Format title slide ----
 
-% Title capitalization and underline
-\let\oldtitle\title
-\renewcommand{\title}[1]{\oldtitle[]{\MakeLowercase{#1}\vspace{-5mm}\\\color{BlackGray}{\rule{\textwidth}{1.5pt}}\vspace{1cm}}}
+% Enable advanced programming features
+\usepackage{etoolbox}
 
-% Define custom commands with complex argument specifications
-\usepackage{xparse}
+% Define commands to insert slide URL
+\newcommand*{\insertavailable}{} % Stored URL (empty by default)
+\newcommand*{\available}[1]{\renewcommand*{\insertavailable}{#1}} % URL defined in preamble
 
-% Paper information
-\NewDocumentCommand{\information}{o g g}{%
-\author[]{#2%
-\IfValueT{#3}{\vspace{5mm}\\#3}%
-\IfValueT{#1}{\vspace{5mm}\\\color{DarkGray}{\footnotesize Available at \url{#1}}}%
-}\date[]{}}
+\setbeamertemplate{title page}{
+  {\usebeamerfont{title}\usebeamercolor[fg]{title}\MakeLowercase{\inserttitle}\par}
+  {\color{BlackGray}\rule{\textwidth}{1.5pt}\par}
+  \vspace{1.5cm}
+  {\usebeamerfont{author}\insertauthor\par}
+  \vspace{5mm}
+  {\usebeamerfont{date}\insertdate\par}
+  \ifdefempty{\insertavailable}{}{\vspace{5mm}{\color{DarkGray}\footnotesize Available at \url{\insertavailable}\par}}
+  \vfill
+}
 
 % ---- Format lists ----
 
@@ -165,22 +167,22 @@
 % ---- Create text alerts ----
 
 % Standard alert
-\NewDocumentCommand{\al}{o g}{%
+\NewDocumentCommand{\al}{o m}{%
 \IfNoValueTF{#1}{\textcolor{RubineRed}{#2}}%
 {\textcolor<#1>{RubineRed}{#2}}}
 
 % Green, positive alert
-\NewDocumentCommand{\alg}{o g}{%
+\NewDocumentCommand{\alg}{o m}{%
 \IfNoValueTF{#1}{\textcolor{Green}{#2}}%
 {\textcolor<#1>{Green}{#2}}}
 
 % Red, negative alert
-\NewDocumentCommand{\alr}{o g}{%
+\NewDocumentCommand{\alr}{o m}{%
 \IfNoValueTF{#1}{\textcolor{Red}{#2}}%
 {\textcolor<#1>{Red}{#2}}}
 
 % Blue, zero alert
-\NewDocumentCommand{\alb}{o g}{%
+\NewDocumentCommand{\alb}{o m}{%
 \IfNoValueTF{#1}{\textcolor{NavyBlue}{#2}}%
 {\textcolor<#1>{NavyBlue}{#2}}}
 
@@ -193,10 +195,11 @@
 \usepackage{multirow}
 
 % Customize captions
-\usepackage{caption}
-
-% Format captions
-\captionsetup{labelformat=empty,size=normalsize}
+\setbeamerfont{caption}{size=\footnotesize}
+\setbeamercolor{caption}{fg=DarkGray}
+\setbeamertemplate{caption}{\centering\usebeamerfont{caption}\usebeamercolor[fg]{caption}\insertcaption\par}
+\AtBeginEnvironment{figure}{\setlength{\abovecaptionskip}{-5pt}\setlength{\belowcaptionskip}{0pt}}
+\AtBeginEnvironment{table}{\setlength{\abovecaptionskip}{5pt}\setlength{\belowcaptionskip}{0pt}}
 
 % Center figures
 \let\oldincludegraphics\includegraphics 
@@ -206,14 +209,14 @@
 
 \setbeamertemplate{blocks}[rounded][shadow=false]
 
-% Define new theorems
+% Define additional theorems
 \newtheorem{proposition}{Proposition}
 \newtheorem{assumption}{Assumption}
 \newtheorem{remark}{Remark}
 
 % ---- Create section slide ----
 
-\newcommand{\heading}[1]{\LARGE\scshape\color{BlackGray}\singlespacing\MakeLowercase{#1}}
+\newcommand*{\heading}[1]{\LARGE\scshape\color{BlackGray}\singlespacing\MakeLowercase{#1}}
 
 % ---- Create last slide ----
 
@@ -223,7 +226,6 @@
 
 \newcommand{\up}{\textuparrow\,}
 \newcommand{\down}{\textdownarrow\,}
-\renewcommand{\flat}{\textrightarrow\,}
 \newcommand{\then}{$\rightsquigarrow\,$}
 \newcommand{\so}{{$\Rightarrow\,$}}
 
