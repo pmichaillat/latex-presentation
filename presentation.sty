@@ -114,13 +114,15 @@
 % Set text color
 \setbeamercolor{normal text}{fg=BlackGray}
 
-% Set list items color
-\setbeamercolor{itemize item}{fg=DarkGray} % Itemized list, first level
-\setbeamercolor{itemize subitem}{fg=DarkGray}  % Itemized list, second level
-\setbeamercolor{itemize subsubitem}{fg=DarkGray}  % Itemized list, third level
-\setbeamercolor{enumerate item}{fg=DarkGray}  % Numbered list, first level
-\setbeamercolor{enumerate subitem}{fg=DarkGray}  % Numbered list, second level
-\setbeamercolor{enumerate subsubitem}{fg=DarkGray}  % Numbered list, third level
+% Set itemized-list item color
+\setbeamercolor{itemize item}{fg=DarkGray} % First level
+\setbeamercolor{itemize subitem}{fg=DarkGray} % Second level
+\setbeamercolor{itemize subsubitem}{fg=DarkGray} % Third level
+
+% Set numbered-list item color
+\setbeamercolor{enumerate item}{fg=DarkGray} % First level
+\setbeamercolor{enumerate subitem}{fg=DarkGray} % Second level
+\setbeamercolor{enumerate subsubitem}{fg=DarkGray} % Third level
 
 % Set theorem colors
 \setbeamercolor{block title}{fg=BlackGray,bg=LightGray} % Title
@@ -138,31 +140,30 @@
 \usepackage{etoolbox}
 
 % Define commands to insert slide URL
-\newcommand*{\insertavailable}{} % Stored URL (empty by default)
-\newcommand*{\available}[1]{\renewcommand*{\insertavailable}{#1}} % URL defined in preamble
+\newcommand*{\inserturl}{} % Stored URL (empty by default)
+\newcommand*{\paperurl}[1]{\renewcommand*{\inserturl}{#1}} % URL defined in preamble
 
-\setbeamertemplate{title page}{
-  {\usebeamerfont{title}\usebeamercolor[fg]{title}\MakeLowercase{\inserttitle}\par}
-  {\color{BlackGray}\rule{\textwidth}{1.5pt}\par}
-  \vspace{1.5cm}
-  {\usebeamerfont{author}\insertauthor\par}
-  \vspace{5mm}
-  {\usebeamerfont{date}\insertdate\par}
-  \ifdefempty{\insertavailable}{}{\vspace{5mm}{\color{DarkGray}\footnotesize Available at \url{\insertavailable}\par}}
-  \vfill
-}
+\setbeamertemplate{title page}{%
+{\usebeamerfont{title}\usebeamercolor[fg]{title}\MakeLowercase{\inserttitle}\par}%
+{\color{BlackGray}\rule{\textwidth}{1.5pt}\par}%
+\vspace{1.5cm}%
+{\usebeamerfont{author}\insertauthor\par}%
+\vspace{5mm}%
+{\usebeamerfont{date}\insertdate\par}%
+\ifdefempty{\inserturl}{}{\vspace{5mm}{\color{DarkGray}\footnotesize Available at \url{\inserturl}\par}}%
+\vfill}
 
 % ---- Format lists ----
 
-% Format itemized lists
-\setbeamertemplate{itemize item}{\textbullet} % First-level item
-\setbeamertemplate{itemize subitem}{\textendash} % Second-level item
-\setbeamertemplate{itemize subsubitem}{\textsquare} % Third-level item
+% Select itemized-list items
+\setbeamertemplate{itemize item}{\textbullet} % First level
+\setbeamertemplate{itemize subitem}{\textendash} % Second level
+\setbeamertemplate{itemize subsubitem}{\textsquare} % Third level
 
-% Format numbered lists
-\setbeamertemplate{enumerate item}[default] % First-level item
-\setbeamertemplate{enumerate subitem}{\alph{enumii}.} % Second-level item
-\setbeamertemplate{enumerate subsubitem}{\roman{enumiii}.} % Third-level item
+% Select numbered-list items
+\setbeamertemplate{enumerate item}[default] % First level
+\setbeamertemplate{enumerate subitem}{\alph{enumii}.} % Second level
+\setbeamertemplate{enumerate subsubitem}{\roman{enumiii}.} % Third level
 
 % ---- Create text alerts ----
 
@@ -222,13 +223,6 @@
 
 \newcommand{\lastslide}{{\setbeamercolor{normal text}{bg=LightGray}\begin{frame}\end{frame}}}
 
-% ---- Define shortcuts for pictograms ----
-
-\newcommand{\up}{\textuparrow\,}
-\newcommand{\down}{\textdownarrow\,}
-\newcommand{\then}{$\rightsquigarrow\,$}
-\newcommand{\so}{{$\Rightarrow\,$}}
-
 % ---- Remove or insert slide numbers ----
 
 % Remove slide numbers by default
@@ -236,3 +230,10 @@
 
 % Uncomment the line below to insert slide numbers
 % \setbeamertemplate{footline}[frame number]
+
+% ---- Define shortcuts for pictograms ----
+
+\newcommand{\up}{\textuparrow\,}
+\newcommand{\down}{\textdownarrow\,}
+\newcommand{\then}{$\rightsquigarrow\,$}
+\newcommand{\so}{{$\Rightarrow\,$}}
