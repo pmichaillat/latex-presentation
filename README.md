@@ -1,6 +1,6 @@
 # Minimalist LaTeX Template for Academic Presentations
 
-This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic presentation. The template uses the [Beamer class](https://github.com/josephwright/beamer). The template follows typographical best practices and has a minimalist design. The template is particularly well suited for research presentations. It is designed to convey scientific arguments and results effectively.
+This repository contains a [LaTeX](https://github.com/latex3/latex2e) template to create an academic presentation. The template uses the [Beamer class](https://github.com/josephwright/beamer). The template follows typographical best practices and has a minimalist design. The template is particularly well suited for research presentations. It is designed to convey scientific arguments and results effectively. The repository also contains a variant of the template to create a wide, 16:9 presentation.
 
 ## Documentation
 
@@ -8,21 +8,23 @@ The template is documented at https://pascalmichaillat.org/c/.
 
 ## Illustration
 
-The presentation produced by the template can be viewed at https://pascalmichaillat.org/c.pdf.
+The presentation produced by the template can be viewed at https://pascalmichaillat.org/c.pdf. The 16:9 presentation can be viewed at https://pascalmichaillat.org/cw.pdf.
 
 ## Usage
 
 - Clone the repository to your local machine.
 - Start editing the LaTeX file `presentation.tex` to replace the boilerplate content with the content of your presentation. 
-- Replace the figures in the PDF file `figures.pdf` with the figures that will be included in the presentation (one figure per page).
+- Replace the figures in the PDF file `figures.pdf` with the figures for your presentation (one figure per page).
 - Compile `presentation.tex` with pdfTeX. This will generate a new PDF file named `presentation.pdf`.
 - The LaTeX style file `presentation.sty` formats the presentation. It must be included in the same folder as `presentation.tex`. It can be modified to alter the presentation's format.
 - The file `presentation.pdf` is not required to use the template. It only illustrates the output of the template. It will be overwritten when `presentation.tex` is compiled.
 
+To produce a wide presentation with 16:9 aspect ratio, edit the LaTeX file `wide.tex` instead of `presentation.tex` and follow the same steps. The wide presentation uses the same `presentation.sty` and `figures.pdf` files. Compiling `wide.tex` with pdfTeX writes `wide.pdf`.
+
 ## Software
 
 - The template is currently operational with TeX Live 2025 on macOS.
-- Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-math/issues) to help improve compatibility.
+- Other LaTeX distributions and operating systems may require minor adjustments. Please [report any issues](https://github.com/pmichaillat/latex-presentation/issues) to help improve compatibility.
 
 ## License
 
@@ -41,7 +43,7 @@ This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Related resources
 
-- [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces academic papers that the same typographic principles as the presentation template. 
+- [latex-paper](https://github.com/pmichaillat/latex-paper) - This LaTeX template produces academic papers that follow the same typographic principles as the presentation template. 
 - [latex-book](https://github.com/pmichaillat/latex-book) - This LaTeX template produces lecture notes and academic books that follow the same typographic principles as the presentation template. 
 - [latex-math](https://github.com/pmichaillat/latex-math) - These LaTeX commands simplify writing mathematical expressions. They can be used in combination with the presentation template.
 - [matlab-figures](https://github.com/pmichaillat/matlab-figures) - This MATLAB template produces minimalist scientific figures that can be inserted into your presentation.
