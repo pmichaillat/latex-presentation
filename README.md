@@ -32,14 +32,18 @@ This repository is licensed under the [MIT License](LICENSE.md).
 
 ## Real-world implementations
 
-- [Recession Detection Using Classifiers on the Anticipation-Precision Frontier](https://pascalmichaillat.org/17p.pdf)
-- [Beveridgean Phillips Curve](https://pascalmichaillat.org/15p.pdf)
-- [Modeling Migration-Induced Unemployment](https://pascalmichaillat.org/14p.pdf)
-- [u* = √uv: The Full-Employment Rate of Unemployment in the United States](https://pascalmichaillat.org/13p.pdf)
-- [An Economical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf)
-- [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf)
-- [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf)
-- [Resolving New Keynesian Anomalies with Wealth in the Utility Function](https://pascalmichaillat.org/11p.pdf)
+- [Recession Detection Using Classifiers on the Anticipation-Precision Frontier](https://pascalmichaillat.org/17p.pdf) (by P. Michaillat)
+- [Does Skill Abundance Still Matter? The Evolution of Comparative Advantage in the 21st Century](https://www.shinnosuke-kikuchi.com/files/research/slide-KIKUCHI-skill-trade.pdf) (by S. Kikuchi)
+- [Efficient range estimation with NDB interpreted code](https://dydra.com/data/els2026/els-2026-retzlaff-efficient-range-estimation-with-ndb-ic_slides_20260522T154456-CEST_published__d55fc286.pdf) (by M. Retzlaff)
+- [A Lisp dialect for NDB interpreted code](https://dydra.com/data/els2026/els-2026-retzlaff-a-lisp-dialect-for-ndb-ic_slides_20260522T154456-CEST_published__d55fc286.pdf)  (by M. Retzlaff)
+- [Beveridgean Phillips Curve](https://pascalmichaillat.org/15p.pdf) (by P. Michaillat and E. Saez)
+- [Modeling Migration-Induced Unemployment](https://pascalmichaillat.org/14p.pdf) (by P. Michaillat)
+- [u* = √uv: The Full-Employment Rate of Unemployment in the United States](https://pascalmichaillat.org/13p.pdf) (by P. Michaillat and E. Saez)
+- [An Economical Business-Cycle Model](https://pascalmichaillat.org/7p.pdf) (by P. Michaillat and E. Saez)
+- [Beveridgean Unemployment Gap](https://pascalmichaillat.org/9p.pdf) (by P. Michaillat and E. Saez)
+- [Pricing under Fairness Concerns](https://pascalmichaillat.org/8p.pdf) (by E. Eyster, K. Madarasz, and P. Michaillat)
+- [Resolving New Keynesian Anomalies with Wealth in the Utility Function](https://pascalmichaillat.org/11p.pdf) (by P. Michaillat and E. Saez)
+
 
 ## Related resources
 
