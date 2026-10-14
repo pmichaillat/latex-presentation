@@ -6,7 +6,7 @@ This repository contains a [LaTeX](https://github.com/latex3/latex2e) template t
 
 The template is documented at https://pascalmichaillat.org/c/.
 
-## Illustration
+## Preview
 
 The presentation produced by the template can be viewed at https://pascalmichaillat.org/c.pdf. The 16:9 presentation can be viewed at https://pascalmichaillat.org/cw.pdf.
 
